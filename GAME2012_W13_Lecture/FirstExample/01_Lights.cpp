@@ -21,7 +21,7 @@ using namespace std;
 #include "stb_image.h"
 
 #define FPS 60
-#define MOVESPEED 0.1f
+#define MOVESPEED 0.3f
 #define TURNSPEED 0.05f
 #define X_AXIS glm::vec3(1,0,0)
 #define Y_AXIS glm::vec3(0,1,0)
@@ -59,7 +59,7 @@ GLfloat pitch, yaw;
 int lastX, lastY;
 
 // Texture variables.
-GLuint txt[10];
+GLuint txt[20];
 GLint width, height, bitDepth;
 
 // Light variables.
@@ -173,9 +173,24 @@ void init(void)
 	stbi_image_free(image6);
 	// Second texture. Blank one.
 
+	
+	// GRASS
+	unsigned char* image7 = stbi_load("grass1.jpg", &width, &height, &bitDepth, 0);
+	if (!image5) cout << "Unable to load file!" << endl;
+	glGenTextures(1, &txt[6]);
+	glBindTexture(GL_TEXTURE_2D, txt[6]);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image7);
+	// Note: image types with native transparency will need to be GL_RGBA instead of GL_RGB.
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+	glGenerateMipmap(GL_TEXTURE_2D);
+	stbi_image_free(image7);
+	
+	// END OF GRASS
 	unsigned char* image2 = stbi_load("base.jpg", &width, &height, &bitDepth, 0);
 	if (!image2) cout << "Unable to load file!" << endl;
-	
 	glGenTextures(1, &txt[1]);
 	glBindTexture(GL_TEXTURE_2D, txt[1]);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image2);
@@ -324,7 +339,71 @@ void transformObject(glm::vec3 scale, glm::vec3 rotationAxis, float rotationAngl
 	glUniformMatrix4fv(viewID, 1, GL_FALSE, &View[0][0]);
 	glUniformMatrix4fv(projID, 1, GL_FALSE, &Projection[0][0]);
 }
+void DrawMaze()
+{
+	glBindTexture(GL_TEXTURE_2D, txt[6]);
+	for (int i = 0; i < 10; i++)
+	{
+		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(7.0f + 1.5 * i, 0.0f, -5.0f));
+		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(7.0f + 1.5 * i, 1.5f, -5.0f));
+		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+	}
+	for (int i = 0; i < 12; i++)
+	{
+		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(23.5f + 1.5 * i, 0.0f, -5.0f));
+		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+	}
+	for (int i = 0; i < 12; i++)
+	{
+		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(23.5f + 1.5 * i, 1.5f, -5.0f));
+		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+	}
+	for (int i = 0; i < 23; i++)
+	{
+		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(7.0f + 1.5 * i, 0.0f, -42.5f));
+		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+	}
+	for (int i = 0; i < 23; i++)
+	{
+		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(7.0f + 1.5 * i, 1.5f, -42.5f));
+		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+	}
+	for (int i = 0; i < 25; i++)
+	{
+		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(7.0f, 0.0f, -5.0f - 1.5*i ));
+		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+	}
+	for (int i = 0; i < 25; i++)
+	{
+		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(7.0f, 1.5f, -5.0f - 1.5 * i));
+		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+	}
 
+	for (int i = 0; i < 25; i++)
+	{
+		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(41.0f, 0.0f, -5.0f - 1.5 * i));
+		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+	}
+	for (int i = 0; i < 25; i++)
+	{
+		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(41.0f, 1.5f, -5.0f - 1.5 * i));
+		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+	}
+}
 void DrawCastleWalls()
 {
 	glBindTexture(GL_TEXTURE_2D, txt[4]);
@@ -439,7 +518,7 @@ void display(void)
 
 	glUniform3f(glGetUniformLocation(program, "sLight.position"), sLight.position.x, sLight.position.y, sLight.position.z);
 	DrawCastleWalls();
-	
+	DrawMaze();
 
 	glBindTexture(GL_TEXTURE_2D, txt[2]);
 	g_prism.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);

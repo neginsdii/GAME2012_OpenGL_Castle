@@ -1,2 +1,2 @@
-PlatformToolSet=v142:VCToolArchitecture=Native32Bit:VCToolsVersion=14.27.29110:TargetPlatformVersion=10.0.18362.0:
-Debug|Win32|C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\|
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v142:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.18362.0
+Debug|Win32|C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\|

@@ -1,50 +1,50 @@
 ﻿  01_Lights.cpp
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\Shape.h(67,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\Shape.h(79,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\Shape.h(151,30): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\Shape.h(67,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\Shape.h(79,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\Shape.h(151,30): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
           with
           [
               _Ty=GLfloat
           ]
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\Shape.h(152,30): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\Shape.h(152,30): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
           with
           [
               _Ty=GLfloat
           ]
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\Shape.h(195,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\Shape.h(360,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\Shape.h(371,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\Shape.h(412,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\Shape.h(436,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(276,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(508,27): warning C4305: '-=': truncation from 'double' to 'T'
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\Shape.h(195,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\Shape.h(360,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\Shape.h(371,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\Shape.h(412,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\Shape.h(436,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(291,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(587,27): warning C4305: '-=': truncation from 'double' to 'T'
           with
           [
               T=float
           ]
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(510,27): warning C4305: '-=': truncation from 'double' to 'T'
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(589,27): warning C4305: '-=': truncation from 'double' to 'T'
           with
           [
               T=float
           ]
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(512,27): warning C4305: '+=': truncation from 'double' to 'T'
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(591,27): warning C4305: '+=': truncation from 'double' to 'T'
           with
           [
               T=float
           ]
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(514,27): warning C4305: '+=': truncation from 'double' to 'T'
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(593,27): warning C4305: '+=': truncation from 'double' to 'T'
           with
           [
               T=float
           ]
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(516,27): warning C4305: '+=': truncation from 'double' to 'T'
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(595,27): warning C4305: '+=': truncation from 'double' to 'T'
           with
           [
               T=float
           ]
-C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(518,27): warning C4305: '-=': truncation from 'double' to 'T'
+C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(597,27): warning C4305: '-=': truncation from 'double' to 'T'
           with
           [
               T=float
           ]
-  FirstExample.vcxproj -> C:\Users\saeid\Downloads\GAME2012_W13_Lecture\GAME2012_W13_Lecture\Debug\FirstExample.exe
+LINK : fatal error LNK1168: cannot open C:\Users\mehra\Desktop\T163\Semester III\3D Graphics\FinalProject\GAME2012_OpenlGL_Castle\GAME2012_W13_Lecture\Debug\FirstExample.exe for writing

@@ -341,68 +341,235 @@ void transformObject(glm::vec3 scale, glm::vec3 rotationAxis, float rotationAngl
 }
 void DrawMaze()
 {
-	glBindTexture(GL_TEXTURE_2D, txt[6]);
-	for (int i = 0; i < 10; i++)
+	
 	{
-		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
-		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(7.0f + 1.5 * i, 0.0f, -5.0f));
-		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		glBindTexture(GL_TEXTURE_2D, txt[6]);
+		for (int i = 0; i < 10; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(7.0f + 1.5 * i, 0.0f, -5.0f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 10; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(7.0f + 1.5 * i, 1.5f, -5.0f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 12; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(23.5f + 1.5 * i, 0.0f, -5.0f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 12; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(23.5f + 1.5 * i, 1.5f, -5.0f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 23; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(7.0f + 1.5 * i, 0.0f, -42.5f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 23; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(7.0f + 1.5 * i, 1.5f, -42.5f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 25; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(7.0f, 0.0f, -5.0f - 1.5 * i));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 25; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(7.0f, 1.5f, -5.0f - 1.5 * i));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+
+		for (int i = 0; i < 25; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(41.0f, 0.0f, -5.0f - 1.5 * i));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 25; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(41.0f, 1.5f, -5.0f - 1.5 * i));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
 	}
-	for (int i = 0; i < 10; i++)
 	{
-		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
-		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(7.0f + 1.5 * i, 1.5f, -5.0f));
-		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		glBindTexture(GL_TEXTURE_2D, txt[6]);
+		for (int i = 0; i < 19; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(9.5f + 1.5 * i, 0.0f, -7.5f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 19; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(9.5f + 1.5 * i, 1.5f, -7.5f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		
+		for (int i = 0; i < 19; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(9.5f + 1.5 * i, 0.0f, -40.5f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 19; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(9.5f + 1.5 * i, 1.5f, -40.5f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		
+		for (int i = 0; i < 22; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(9.5f , 0.0f, -7.5f-1.5*i));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 22; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(9.5f, 1.5f, -7.5f-1.5*i));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+
+		for (int i = 0; i < 22; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(38.0f, 0.0f, -7.5f - 1.5 * i));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 22; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(38.0f, 1.5f, -7.5f - 1.5 * i));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
 	}
-	for (int i = 0; i < 12; i++)
 	{
-		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
-		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(23.5f + 1.5 * i, 0.0f, -5.0f));
-		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
-	}
-	for (int i = 0; i < 12; i++)
+		glBindTexture(GL_TEXTURE_2D, txt[6]);
+		for (int i = 0; i < 16; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(12.0f + 1.5 * i, 0.0f, -9.5f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 16; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(12.0f + 1.5 * i, 1.5f, -9.5f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+
+			for (int i = 0; i < 16; i++)
+			{
+				g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+				transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(12.0f + 1.5 * i, 0.0f, -38.5f));
+				glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+			}
+			for (int i = 0; i < 16; i++)
+			{
+				g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+				transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(12.0f + 1.5 * i, 1.5f, -38.5f));
+				glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+			}
+
+				for (int i = 0; i < 19; i++)
+			{
+				g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+				transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(12.0f, 0.0f, -9.5f - 1.5 * i));
+				glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+			}
+			for (int i = 0; i < 19; i++)
+			{
+				g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+				transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(12.0f, 1.5f, -9.5f - 1.5 * i));
+				glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+			}
+
+			for (int i = 0; i < 19; i++)
+			{
+				g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+				transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(35.5f, 0.0f, -9.5f - 1.5 * i));
+				glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+			}
+			for (int i = 0; i < 19; i++)
+			{
+				g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+				transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(35.5f, 1.5f, -9.5f - 1.5 * i));
+				glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+			}
+		}
 	{
-		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
-		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(23.5f + 1.5 * i, 1.5f, -5.0f));
-		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
-	}
-	for (int i = 0; i < 23; i++)
-	{
-		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
-		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(7.0f + 1.5 * i, 0.0f, -42.5f));
-		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
-	}
-	for (int i = 0; i < 23; i++)
-	{
-		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
-		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(7.0f + 1.5 * i, 1.5f, -42.5f));
-		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
-	}
-	for (int i = 0; i < 25; i++)
-	{
-		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
-		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(7.0f, 0.0f, -5.0f - 1.5*i ));
-		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
-	}
-	for (int i = 0; i < 25; i++)
-	{
-		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
-		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(7.0f, 1.5f, -5.0f - 1.5 * i));
-		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		for (int i = 0; i < 12; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(15.0f + 1.5 * i, 0.0f, -12.0f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 12; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(15.0f + 1.5 * i, 1.5f, -12.0f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+
+		for (int i = 0; i < 12; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(15.0f + 1.5 * i, 0.0f, -36.5f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 12; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), X_AXIS, 0.0f, glm::vec3(15.0f + 1.5 * i, 1.5f, -36.5f));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+
+		for (int i = 0; i < 16; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(15.0f, 0.0f, -12.0f - 1.5 * i));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 16; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(15.0f, 1.5f, -12.0f - 1.5 * i));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+
+		for (int i = 0; i < 16; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(32.5f, 0.0f, -12.0f - 1.5 * i));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
+		for (int i = 0; i < 16; i++)
+		{
+			g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
+			transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(32.5f, 1.5f, -12.0f - 1.5 * i));
+			glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
+		}
 	}
 
-	for (int i = 0; i < 25; i++)
-	{
-		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
-		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(41.0f, 0.0f, -5.0f - 1.5 * i));
-		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
-	}
-	for (int i = 0; i < 25; i++)
-	{
-		g_cube.BufferShape(&ibo, &points_vbo, &colors_vbo, &uv_vbo, &normals_vbo, program);
-		transformObject(glm::vec3(1.5f, 1.5f, 0.5f), Y_AXIS, 90.0f, glm::vec3(41.0f, 1.5f, -5.0f - 1.5 * i));
-		glDrawElements(GL_TRIANGLES, g_cube.NumIndices(), GL_UNSIGNED_SHORT, 0);
-	}
+
+	
 }
 void DrawCastleWalls()
 {

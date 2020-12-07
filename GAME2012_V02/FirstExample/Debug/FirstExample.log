@@ -1,0 +1,50 @@
+﻿  01_Lights.cpp
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\Shape.h(67,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\Shape.h(79,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\Shape.h(151,30): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=GLfloat
+          ]
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\Shape.h(152,30): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=GLfloat
+          ]
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\Shape.h(195,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\Shape.h(360,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\Shape.h(371,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\Shape.h(412,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\Shape.h(436,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(395,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(1125,27): warning C4305: '-=': truncation from 'double' to 'T'
+          with
+          [
+              T=float
+          ]
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(1127,27): warning C4305: '-=': truncation from 'double' to 'T'
+          with
+          [
+              T=float
+          ]
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(1129,27): warning C4305: '+=': truncation from 'double' to 'T'
+          with
+          [
+              T=float
+          ]
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(1131,27): warning C4305: '+=': truncation from 'double' to 'T'
+          with
+          [
+              T=float
+          ]
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(1133,27): warning C4305: '+=': truncation from 'double' to 'T'
+          with
+          [
+              T=float
+          ]
+C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\FirstExample\01_Lights.cpp(1135,27): warning C4305: '-=': truncation from 'double' to 'T'
+          with
+          [
+              T=float
+          ]
+  FirstExample.vcxproj -> C:\Users\saeid\OneDrive\Desktop\GAME2012_W13_Lecture\Debug\FirstExample.exe
